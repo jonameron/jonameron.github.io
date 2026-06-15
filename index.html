@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jonathan Staude</title>
+<meta name="description" content="Jonathan Staude — founder of 11data. I build AI agents and the memory and tooling they run on.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16181d; --muted:#5b616e; --line:#e6e4de; --bg:#faf9f6;
+    --accent:#1f3a8a; --card:#ffffff;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    line-height:1.6; font-size:17px; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:0 24px}
+  header{padding:96px 0 40px}
+  .eyebrow{font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 18px}
+  h1{
+    font-family:Newsreader,Georgia,serif; font-weight:500; font-size:48px;
+    line-height:1.1; letter-spacing:-.01em; margin:0 0 22px;
+  }
+  .lede{font-size:21px; color:var(--ink); margin:0 0 8px; max-width:36ch}
+  .lede .a{color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(31,58,138,.25)}
+  .lede .a:hover{border-color:var(--accent)}
+  section{padding:40px 0; border-top:1px solid var(--line)}
+  h2{font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:600; margin:0 0 28px}
+  p{margin:0 0 18px; color:#2c2f37}
+  a{color:var(--accent)}
+  .work{display:grid; gap:14px}
+  .item{
+    display:block; padding:20px 22px; background:var(--card); border:1px solid var(--line);
+    border-radius:12px; text-decoration:none; color:inherit; transition:border-color .15s, transform .15s;
+  }
+  .item:hover{border-color:#c9c6bd; transform:translateY(-1px)}
+  .item h3{font-family:Newsreader,serif; font-weight:500; font-size:21px; margin:0 0 6px; color:var(--ink)}
+  .item p{margin:0; font-size:15.5px; color:var(--muted)}
+  .item .tag{float:right; font-size:13px; color:var(--accent); font-weight:500}
+  footer{padding:48px 0 96px; border-top:1px solid var(--line); color:var(--muted); font-size:15.5px}
+  footer a{text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  .dot{margin:0 10px; color:var(--line)}
+  @media(max-width:560px){
+    header{padding:64px 0 32px} h1{font-size:36px} .lede{font-size:19px}
+    .item .tag{float:none; display:block; margin-top:6px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">Jonathan Staude</p>
+    <h1>I build AI agents and the infrastructure they run on.</h1>
+    <p class="lede">Founder of <a class="a" href="https://11data.ai">11data</a>. I work on the
+    layer that makes agents reliable in production — memory, tooling, and a documentation-first
+    way of building.</p>
+  </header>
+
+  <section>
+    <h2>What I'm building</h2>
+    <div class="work">
+      <a class="item" href="https://github.com/jonameron/longmem-oss">
+        <span class="tag">GitHub →</span>
+        <h3>LongMem</h3>
+        <p>Long-term memory for AI agents. Store a memory in one API call, recall it in
+        another, with hybrid semantic + keyword search. Open SDKs and connectors included.</p>
+      </a>
+      <a class="item" href="https://github.com/jonameron/docs-driven-agents">
+        <span class="tag">GitHub →</span>
+        <h3>docs-driven-agents</h3>
+        <p>The documentation-first methodology I use to build with coding agents: docs as the
+        source of truth, procedures codified as skills, wired into a loop that compounds.</p>
+      </a>
+      <a class="item" href="https://11data.ai">
+        <span class="tag">Site →</span>
+        <h3>11data</h3>
+        <p>Where the work ships. Agent products, applied AI, and the occasional student
+        intern whose work I put out in the open.</p>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Background</h2>
+    <p>I've been building community-driven, decentralized systems since before it was a
+    category. In 2018 I led <a href="https://github.com/jonameron/MK-Protection">protchain</a>,
+    a decentralized cellphone-insurance concept presented at D1Conf in Prague.</p>
+    <p>The throughline hasn't changed: take a process everyone assumes needs a central
+    operator, and work out how to distribute it — whether that's risk in an insurance pool or
+    memory across a fleet of agents.</p>
+  </section>
+
+  <footer>
+    <a href="https://11data.ai">11data.ai</a>
+    <span class="dot">·</span>
+    <a href="https://github.com/jonameron">GitHub</a>
+    <span class="dot">·</span>
+    <a href="mailto:jstaude@11data.de">jstaude@11data.de</a>
+  </footer>
+
+</div>
+</body>
+</html>
