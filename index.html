@@ -30,6 +30,7 @@
   .lede{font-size:21px; color:var(--ink); margin:0 0 8px; max-width:36ch}
   .lede .a{color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(31,58,138,.25)}
   .lede .a:hover{border-color:var(--accent)}
+  .tagline{font-size:16px; color:var(--muted); font-style:italic; margin:16px 0 0}
   section{padding:40px 0; border-top:1px solid var(--line)}
   h2{font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:600; margin:0 0 28px}
   p{margin:0 0 18px; color:#2c2f37}
@@ -43,14 +44,31 @@
   .item h3{font-family:Newsreader,serif; font-weight:500; font-size:21px; margin:0 0 6px; color:var(--ink)}
   .item p{margin:0; font-size:15.5px; color:var(--muted)}
   .item .tag{float:right; font-size:13px; color:var(--accent); font-weight:500}
-  footer{padding:48px 0 96px; border-top:1px solid var(--line); color:var(--muted); font-size:15.5px}
-  footer a{text-decoration:none}
-  footer a:hover{text-decoration:underline}
-  .dot{margin:0 10px; color:var(--line)}
+  .item .badge{
+    display:inline-block; font-size:12px; font-weight:500; letter-spacing:.04em;
+    padding:2px 8px; border-radius:99px; border:1px solid var(--line);
+    color:var(--muted); margin-left:10px; vertical-align:middle;
+  }
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:12px;
+    overflow:hidden; text-decoration:none; color:inherit;
+    transition:border-color .15s, transform .15s; display:block;
+  }
+  .card:hover{border-color:#c9c6bd; transform:translateY(-2px)}
+  .card img{width:100%; display:block; border-bottom:1px solid var(--line)}
+  .card-body{padding:16px 18px}
+  .card-body h3{font-family:Newsreader,serif; font-weight:500; font-size:19px; margin:0 0 5px; color:var(--ink)}
+  .card-body p{margin:0; font-size:14.5px; color:var(--muted); line-height:1.5}
   @media(max-width:560px){
     header{padding:64px 0 32px} h1{font-size:36px} .lede{font-size:19px}
     .item .tag{float:none; display:block; margin-top:6px}
+    .grid{grid-template-columns:1fr}
   }
+  footer{padding:48px 0 96px; border-top:1px solid var(--line); color:var(--muted); font-size:15.5px}
+  footer a{text-decoration:none; color:var(--muted)}
+  footer a:hover{text-decoration:underline}
+  .dot{margin:0 10px; color:var(--line)}
 </style>
 </head>
 <body>
@@ -62,28 +80,64 @@
     <p class="lede">Founder of <a class="a" href="https://11data.ai">11data</a>. I work on the
     layer that makes agents reliable in production — memory, tooling, and a documentation-first
     way of building.</p>
+    <p class="tagline">Concepts were always the easy part. Building them wasn't — so I built the infrastructure to close that gap.</p>
   </header>
 
   <section>
-    <h2>What I'm building</h2>
+    <h2>Products</h2>
+    <div class="grid">
+
+      <a class="card" href="https://longmem.dev">
+        <img src="assets/longmem.png" alt="LongMem">
+        <div class="card-body">
+          <h3>LongMem <span class="badge">Public Beta</span></h3>
+          <p>Give your agents perfect recall. Store, recall, and search long-term memories over a single API. Hybrid vector + keyword search, multi-tenant, MCP-native.</p>
+        </div>
+      </a>
+
+      <a class="card" href="#">
+        <img src="assets/rememberos.png" alt="RememberOS">
+        <div class="card-body">
+          <h3>RememberOS</h3>
+          <p>Organizational memory OS. Your organization remembers everything — sovereign, European, self-hostable. Humans decide what matters, agents remember it.</p>
+        </div>
+      </a>
+
+      <a class="card" href="https://cc.11data.ai">
+        <img src="assets/check-and-care.png" alt="Check & Care">
+        <div class="card-body">
+          <h3>Check &amp; Care</h3>
+          <p>Precision maintenance platform for Rhenus Fluid Management. TRGS 611 compliance, KSS management, and consumption analytics — all in one platform.</p>
+        </div>
+      </a>
+
+      <a class="card" href="#">
+        <img src="assets/transcriptdrop.png" alt="TranscriptDrop">
+        <div class="card-body">
+          <h3>TranscriptDrop</h3>
+          <p>Audio to inbox. Upload a voice memo — transcript + AI summary delivered to your email. Files auto-delete after 60 minutes. No app, no login, no storage.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Platform &amp; methodology</h2>
     <div class="work">
-      <a class="item" href="https://github.com/jonameron/longmem-oss">
+      <a class="item" href="https://github.com/11data/mira">
         <span class="tag">GitHub →</span>
-        <h3>LongMem</h3>
-        <p>Long-term memory for AI agents. Store a memory in one API call, recall it in
-        another, with hybrid semantic + keyword search. Open SDKs and connectors included.</p>
+        <h3>Mira</h3>
+        <p>Voice-first agent platform. Mobile PWA and Telegram in one shared session, with a
+        natural-conversation voice pipeline, modular agent routing, and LongMem-backed memory.
+        Self-building: a harness loop drives the agent autonomously.</p>
       </a>
       <a class="item" href="https://github.com/jonameron/docs-driven-agents">
         <span class="tag">GitHub →</span>
         <h3>docs-driven-agents</h3>
-        <p>The documentation-first methodology I use to build with coding agents: docs as the
-        source of truth, procedures codified as skills, wired into a loop that compounds.</p>
-      </a>
-      <a class="item" href="https://11data.ai">
-        <span class="tag">Site →</span>
-        <h3>11data</h3>
-        <p>Where the work ships. Agent products, applied AI, and the occasional student
-        intern whose work I put out in the open.</p>
+        <p>Documentation as the primary source of truth; reusable procedures as skills; a
+        self-build loop that turns a coding agent into an autonomous developer. Less vibe-coding,
+        more engineering.</p>
       </a>
     </div>
   </section>
@@ -94,12 +148,16 @@
     category. In 2018 I led <a href="https://github.com/jonameron/MK-Protection">protchain</a>,
     a decentralized cellphone-insurance concept presented at D1Conf in Prague.</p>
     <p>The throughline hasn't changed: take a process everyone assumes needs a central
-    operator, and work out how to distribute it — whether that's risk in an insurance pool or
-    memory across a fleet of agents.</p>
+    operator, and work out how to make it reliable without one — whether that's risk in an
+    insurance pool or memory across a fleet of agents.</p>
+    <p>I also bring on student interns and put their work out in the open —
+    <a href="https://github.com/jonameron/11data_agent_research">11data_agent_research</a>.</p>
   </section>
 
   <footer>
     <a href="https://11data.ai">11data.ai</a>
+    <span class="dot">·</span>
+    <a href="https://longmem.dev">longmem.dev</a>
     <span class="dot">·</span>
     <a href="https://github.com/jonameron">GitHub</a>
     <span class="dot">·</span>
