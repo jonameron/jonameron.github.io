@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jonathan Staude</title>
-<meta name="description" content="Jonathan Staude — founder of 11data. Enterprise architect turned AI engineer.">
+<title>Jonathan Staude — Strategy to deployment. One person. No handoff.</title>
+<meta name="description" content="Jonathan Staude — data architect, AI engineer, founder of 11data. Strategy to deployment without an agency in between.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -36,6 +36,19 @@
   p:last-child{margin-bottom:0}
   a{color:var(--accent)}
 
+  /* about */
+  .about p{font-size:18px; line-height:1.65; color:#2c2f37; max-width:60ch}
+  .about .pull{
+    font-family:Newsreader,serif; font-size:21px; font-weight:400;
+    color:var(--ink); border-left:2px solid var(--accent); padding-left:20px;
+    margin:24px 0; line-height:1.45;
+  }
+
+  /* capabilities */
+  .caps{display:grid; grid-template-columns:1fr 1fr; gap:10px 32px; margin-top:24px}
+  .cap-group h4{font-size:12px; letter-spacing:.07em; text-transform:uppercase; color:var(--muted); font-weight:600; margin:0 0 6px}
+  .cap-group p{font-size:14px; color:#4a4f5a; line-height:1.6; margin:0}
+
   /* product grid */
   .grid{display:grid; grid-template-columns:1fr 1fr; gap:14px}
   .card{
@@ -63,7 +76,7 @@
   .item .tag{margin-left:auto; font-size:13px; color:var(--accent); font-weight:500; white-space:nowrap}
   .item p{margin:0; font-size:14.5px; color:var(--muted); line-height:1.5}
 
-  /* consulting timeline */
+  /* timeline */
   .timeline{display:grid; gap:0}
   .trow{display:grid; grid-template-columns:90px 1fr; gap:16px; padding:14px 0; border-bottom:1px solid var(--line)}
   .trow:last-child{border-bottom:none}
@@ -85,6 +98,7 @@
   @media(max-width:560px){
     header{padding:64px 0 32px} h1{font-size:36px} .lede{font-size:18px; max-width:none}
     .grid{grid-template-columns:1fr}
+    .caps{grid-template-columns:1fr}
     .trow{grid-template-columns:70px 1fr; gap:10px}
     .item .tag{display:none}
   }
@@ -95,14 +109,85 @@
 
   <header>
     <p class="eyebrow">Jonathan Staude · 11data</p>
-    <h1>Enterprise architect turned AI engineer.</h1>
-    <p class="lede">Fifteen years building complex systems and leading teams — from Solvency II
-    architectures at European insurers to real-time data platforms and AI agent infrastructure.
-    Founder of <a class="a" href="https://11data.ai">11data</a>.</p>
+    <h1>Strategy to deployment.<br>One person. No handoff.</h1>
+    <p class="lede">I work with leadership teams to define data and AI strategy — then
+    build the systems that execute it. Mathematician. 15 years across insurance, financial
+    services, logistics, and manufacturing. Founder of
+    <a class="a" href="https://11data.ai">11data</a>.</p>
   </header>
 
+  <section class="about">
+    <h2>About</h2>
+    <p>Most data and AI initiatives fail in the gap between strategy and implementation —
+    not because the strategy was wrong, but because the people who defined it handed off
+    to people who weren't in the room.</p>
+    <div class="pull">I don't produce slide decks and hand them to an implementation team.
+    I'm usually the implementation team.</div>
+    <p>I've held the roles of lead architect, team lead, project manager, and technical
+    lead simultaneously on the same engagement — across clients ranging from European
+    insurance groups and global shipping companies to fast-growing tech startups. I work
+    directly with C-level stakeholders in the morning and commit code in the afternoon.</p>
+    <div class="caps">
+      <div class="cap-group">
+        <h4>Data Engineering</h4>
+        <p>PostgreSQL · dbt · Databricks · Kafka · AWS · Azure · SAP BW · Power BI · R</p>
+      </div>
+      <div class="cap-group">
+        <h4>AI Systems</h4>
+        <p>LLM integration · RAG · AI agents · vector search · MCP · Python · TypeScript</p>
+      </div>
+      <div class="cap-group">
+        <h4>Architecture &amp; Governance</h4>
+        <p>Data Warehouse · Data Strategy · Data Governance · IFRS 17 · Solvency II</p>
+      </div>
+      <div class="cap-group">
+        <h4>Delivery</h4>
+        <p>Team lead · PM · SaaS product development · from concept to production</p>
+      </div>
+    </div>
+  </section>
+
   <section>
-    <h2>Products</h2>
+    <h2>Data Platforms</h2>
+    <div class="items">
+
+      <div class="item">
+        <div class="item-head">
+          <h3>Real-time Data Warehouse — IDnow</h3>
+          <span class="year">2019–2022</span>
+          <span class="badge">37 months</span>
+        </div>
+        <p>Built a full real-time data warehouse for 500+ reports at a major German identity
+        verification provider — covering data integration concept, maturity assessment,
+        architecture, reporting backend, and frontend. Kafka, Confluent, Docker, AWS, R, Tableau.</p>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <h3>Data Strategy &amp; DWH — Harren &amp; Partner</h3>
+          <span class="year">2023–2024</span>
+          <span class="badge">14 months</span>
+        </div>
+        <p>Data strategy and data warehouse concept for an international shipping company.
+        Defined architecture, tooling selection, and roadmap. Azure, Python, Power BI,
+        PostgreSQL, MS Fabric.</p>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <h3>IT Efficiency Platform — SIV AG</h3>
+          <span class="year">2025</span>
+          <span class="badge">5 months</span>
+        </div>
+        <p>Built a platform for analysing engineering team efficiency using GitLab and Jira
+        data. dbt transformation layer, PostgreSQL on AWS, open source stack throughout.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>AI Systems &amp; Products</h2>
     <div class="grid">
 
       <a class="card" href="https://longmem.dev">
@@ -110,7 +195,7 @@
         <div class="card-body">
           <p class="card-meta">2024 · Public Beta</p>
           <h3>LongMem</h3>
-          <p>Long-term memory for AI agents — store, recall, and search over a single API. Hybrid vector + keyword, multi-tenant, MCP-native.</p>
+          <p>Production memory layer for AI agents. Store, recall, and search over a single API. Hybrid vector + keyword, multi-tenant, MCP-native.</p>
         </div>
       </a>
 
@@ -119,9 +204,16 @@
         <div class="card-body">
           <p class="card-meta">2025 · European &amp; sovereign</p>
           <h3>RememberOS</h3>
-          <p>Organizational memory OS. Humans decide what matters, agents remember it. Self-hostable, EU-hosted, bring your own model.</p>
+          <p>Organisational memory OS. Humans decide what matters, agents remember it. Self-hostable, EU-hosted, bring your own model.</p>
         </div>
       </a>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Client Software</h2>
+    <div class="grid">
 
       <a class="card" href="https://cc.11data.ai">
         <img src="assets/check-and-care.png" alt="Check &amp; Care">
@@ -135,12 +227,69 @@
       <a class="card" href="https://transcriptdrop.com">
         <img src="assets/transcriptdrop.png" alt="TranscriptDrop">
         <div class="card-body">
-          <p class="card-meta">2024 · No app required</p>
+          <p class="card-meta">2024</p>
           <h3>TranscriptDrop</h3>
-          <p>Audio to inbox. Upload a voice memo — transcript + AI summary delivered to email. Files auto-delete at 60 minutes.</p>
+          <p>Audio to inbox. Voice memo or upload — transcript + AI summary delivered to email. No app, no login, no storage.</p>
         </div>
       </a>
 
+    </div>
+  </section>
+
+  <section>
+    <h2>Regulatory &amp; Architecture</h2>
+    <div class="timeline">
+      <div class="trow">
+        <span class="period">2021–2023</span>
+        <div>
+          <h4>DWH Programme — German Reinsurance Group <span class="badge">27 months</span></h4>
+          <p>Team lead, PM, and business analyst on a group-wide SAP BW data warehousing
+          go-live. Aligned global test tracks, supported production cutover. SAP BW, MS Azure.</p>
+        </div>
+      </div>
+      <div class="trow">
+        <span class="period">2017–2018</span>
+        <div>
+          <h4>Lead Architect &amp; PM — IFRS 17 <span class="badge">17 months</span></h4>
+          <p>Group-level solution architecture for a major German insurance group's IFRS 17
+          programme. Executive stakeholder management; SAS infrastructure for risk management.</p>
+        </div>
+      </div>
+      <div class="trow">
+        <span class="period">2015–2016</span>
+        <div>
+          <h4>Solution &amp; Data Architect — Finance &amp; Risk (Taiwan)</h4>
+          <p>Finance &amp; Risk architecture for a Taiwanese life insurer — ALM, Solvency II,
+          and RaRoC use cases on SAP HANA / SAP FS-PER / SAP BW.</p>
+        </div>
+      </div>
+      <div class="trow">
+        <span class="period">2011–2016</span>
+        <div>
+          <h4>Actuarial &amp; Regulatory Consulting</h4>
+          <p>Solvency II modelling and PMO (French insurance group, 2.5 years), IFRS 4
+          pre-study, Pillar III reporting design, and actuarial tool development used by
+          5+ clients across German and French insurance markets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Strategy &amp; Advisory</h2>
+    <p>29 engagements since 2011 across financial services, insurance, logistics, energy,
+    manufacturing, and tech — as consultant, architect, team lead, and subject-matter expert.
+    I work directly with CIOs, CTOs, Heads of Data, and CFOs on strategy; I also run the
+    implementation.</p>
+    <div class="items" style="margin-top:20px">
+      <div class="item">
+        <div class="item-head">
+          <h3>Data Strategy — Simon-Kucher</h3>
+          <span class="year">2024</span>
+          <span class="badge">3 months</span>
+        </div>
+        <p>Subject-matter expert supporting Simon-Kucher's data strategy practice.</p>
+      </div>
     </div>
   </section>
 
@@ -172,7 +321,7 @@
           <span class="year">2025</span>
           <span class="tag">GitHub →</span>
         </div>
-        <p>Voice-first agent platform. Mobile PWA and Telegram in one shared session, with a Pipecat voice pipeline, modular agent routing, and LongMem-backed memory. Self-building via a harness loop.</p>
+        <p>Voice-first agent platform — mobile PWA and Telegram in one shared session, Pipecat voice pipeline, modular agent routing, LongMem-backed memory.</p>
       </a>
 
       <a class="item" href="https://github.com/jonameron/docs-driven-agents">
@@ -181,107 +330,18 @@
           <span class="year">2024</span>
           <span class="tag">GitHub →</span>
         </div>
-        <p>The documentation-first methodology for building with coding agents: docs as source of truth, procedures as skills, wired into a self-build loop that compounds over time.</p>
+        <p>Documentation-first methodology for building with coding agents: docs as source of truth, procedures as skills, wired into a self-build loop.</p>
       </a>
 
-      <a class="item" href="https://github.com/jonameron/11data_agent_research">
-        <div class="item-head">
-          <h3>11data Agent Research</h3>
-          <span class="year">2024</span>
-          <span class="tag">GitHub →</span>
-        </div>
-        <p>Student internship project: three ways to build an AI social-media agent — full-code, low-code, and no-code. Everything in the open.</p>
-      </a>
-
-    </div>
-  </section>
-
-  <section>
-    <h2>Consulting (2011–present)</h2>
-    <p>29 engagements across data engineering, enterprise architecture, and management consulting
-    — financial services, insurance, shipping, energy, and tech. Roles spanning architect,
-    team lead / engineering manager, project manager, and subject-matter expert.</p>
-    <div class="timeline">
-      <div class="trow">
-        <span class="period">2019–2022</span>
-        <div>
-          <h4>Data Platform Build — IDnow <span class="badge">37 months</span></h4>
-          <p>Built a full real-time data warehouse for 500+ reports at a major German identity
-          verification provider. Covered data integration concept, maturity assessment,
-          architecture, reporting backend and frontend. Kafka, Confluent, Docker, AWS, R, Tableau.</p>
-        </div>
-      </div>
-      <div class="trow">
-        <span class="period">2021–2023</span>
-        <div>
-          <h4>DWH Programme — German Reinsurance Group <span class="badge">27 months</span></h4>
-          <p>Team lead, PM, and business analyst on a group-wide SAP BW data warehousing go-live.
-          Aligned global test tracks, supported production cutover. SAP BW, MS Azure.</p>
-        </div>
-      </div>
-      <div class="trow">
-        <span class="period">2017–2018</span>
-        <div>
-          <h4>Lead Architect &amp; PM — IFRS 17 <span class="badge">17 months</span></h4>
-          <p>Group-level solution architecture for a major German insurance group's IFRS 17
-          programme. Executive stakeholder management; SAS infrastructure for risk management.</p>
-        </div>
-      </div>
-      <div class="trow">
-        <span class="period">2024</span>
-        <div>
-          <h4>Data Strategy Advisor — Simon-Kucher <span class="badge">3 months</span></h4>
-          <p>Subject-matter expert supporting Simon-Kucher's data strategy practice.</p>
-        </div>
-      </div>
-      <div class="trow">
-        <span class="period">2025</span>
-        <div>
-          <h4>IT Efficiency Platform — SIV AG <span class="badge">5 months</span></h4>
-          <p>Built a platform for analyzing IT efficiency across GitLab and Jira data.
-          DBT-based transformation layer, PostgreSQL on AWS, open source stack throughout.</p>
-        </div>
-      </div>
-      <div class="trow">
-        <span class="period">2024</span>
-        <div>
-          <h4>Data Strategy &amp; DWH — Harren (International Shipping) <span class="badge">14 months</span></h4>
-          <p>Outlined data strategy and conceptualized data warehouse for an international
-          shipping company. Azure, Python, PowerBI, PostgreSQL, MS Fabric.</p>
-        </div>
-      </div>
-      <div class="trow">
-        <span class="period">2015–2016</span>
-        <div>
-          <h4>Solution &amp; Data Architect — Finance &amp; Risk (Taiwan)</h4>
-          <p>Finance &amp; Risk architecture for a Taiwanese life insurer — ALM, Solvency II,
-          and RaRoC use cases on SAP HANA / SAP FS-PER / SAP BW.</p>
-        </div>
-      </div>
-      <div class="trow">
-        <span class="period">2011–2016</span>
-        <div>
-          <h4>Actuarial &amp; Regulatory Consulting</h4>
-          <p>Solvency II modelling and PMO (French insurance group, 2.5 years), IFRS 4 pre-study,
-          health insurer QIS, Pillar III reporting design, and actuarial tool development used
-          by 5+ clients across German and French insurance markets.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Early &amp; Research Projects</h2>
-    <div class="items">
       <a class="item" href="https://github.com/jonameron/MK-Protection">
         <div class="item-head">
           <h3>protchain</h3>
           <span class="year">2018</span>
           <span class="tag">GitHub →</span>
         </div>
-        <p>Decentralized cellphone insurance on Ethereum — community-driven, no central operator.
-        Presented at D1Conf in Prague.</p>
+        <p>Decentralized cellphone insurance on Ethereum. Presented at D1Conf in Prague.</p>
       </a>
+
     </div>
   </section>
 
