@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jonathan Staude</title>
-<meta name="description" content="Jonathan Staude — founder of 11data. I build AI agents and the memory and tooling they run on.">
+<meta name="description" content="Jonathan Staude — founder of 11data. Enterprise architect turned AI engineer.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -27,28 +27,16 @@
     font-family:Newsreader,Georgia,serif; font-weight:500; font-size:48px;
     line-height:1.1; letter-spacing:-.01em; margin:0 0 22px;
   }
-  .lede{font-size:21px; color:var(--ink); margin:0 0 8px; max-width:36ch}
+  .lede{font-size:20px; color:#2c2f37; margin:0; max-width:38ch; line-height:1.5}
   .lede .a{color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(31,58,138,.25)}
   .lede .a:hover{border-color:var(--accent)}
-  .tagline{font-size:16px; color:var(--muted); font-style:italic; margin:16px 0 0}
   section{padding:40px 0; border-top:1px solid var(--line)}
   h2{font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:600; margin:0 0 28px}
-  p{margin:0 0 18px; color:#2c2f37}
+  p{margin:0 0 14px; color:#2c2f37}
+  p:last-child{margin-bottom:0}
   a{color:var(--accent)}
-  .work{display:grid; gap:14px}
-  .item{
-    display:block; padding:20px 22px; background:var(--card); border:1px solid var(--line);
-    border-radius:12px; text-decoration:none; color:inherit; transition:border-color .15s, transform .15s;
-  }
-  .item:hover{border-color:#c9c6bd; transform:translateY(-1px)}
-  .item h3{font-family:Newsreader,serif; font-weight:500; font-size:21px; margin:0 0 6px; color:var(--ink)}
-  .item p{margin:0; font-size:15.5px; color:var(--muted)}
-  .item .tag{float:right; font-size:13px; color:var(--accent); font-weight:500}
-  .item .badge{
-    display:inline-block; font-size:12px; font-weight:500; letter-spacing:.04em;
-    padding:2px 8px; border-radius:99px; border:1px solid var(--line);
-    color:var(--muted); margin-left:10px; vertical-align:middle;
-  }
+
+  /* product grid */
   .grid{display:grid; grid-template-columns:1fr 1fr; gap:14px}
   .card{
     background:var(--card); border:1px solid var(--line); border-radius:12px;
@@ -57,30 +45,60 @@
   }
   .card:hover{border-color:#c9c6bd; transform:translateY(-2px)}
   .card img{width:100%; display:block; border-bottom:1px solid var(--line)}
-  .card-body{padding:16px 18px}
-  .card-body h3{font-family:Newsreader,serif; font-weight:500; font-size:19px; margin:0 0 5px; color:var(--ink)}
-  .card-body p{margin:0; font-size:14.5px; color:var(--muted); line-height:1.5}
-  @media(max-width:560px){
-    header{padding:64px 0 32px} h1{font-size:36px} .lede{font-size:19px}
-    .item .tag{float:none; display:block; margin-top:6px}
-    .grid{grid-template-columns:1fr}
+  .card-body{padding:14px 16px}
+  .card-body h3{font-family:Newsreader,serif; font-weight:500; font-size:18px; margin:0 0 4px; color:var(--ink)}
+  .card-body p{margin:0; font-size:14px; color:var(--muted); line-height:1.5}
+  .card-meta{font-size:12px; color:var(--muted); margin-bottom:4px}
+
+  /* item list */
+  .items{display:grid; gap:10px}
+  .item{
+    display:block; padding:18px 20px; background:var(--card); border:1px solid var(--line);
+    border-radius:12px; text-decoration:none; color:inherit; transition:border-color .15s, transform .15s;
   }
+  .item:hover{border-color:#c9c6bd; transform:translateY(-1px)}
+  .item-head{display:flex; align-items:baseline; gap:10px; margin-bottom:5px}
+  .item h3{font-family:Newsreader,serif; font-weight:500; font-size:19px; margin:0; color:var(--ink)}
+  .item .year{font-size:13px; color:var(--muted); white-space:nowrap}
+  .item .tag{margin-left:auto; font-size:13px; color:var(--accent); font-weight:500; white-space:nowrap}
+  .item p{margin:0; font-size:14.5px; color:var(--muted); line-height:1.5}
+
+  /* consulting timeline */
+  .timeline{display:grid; gap:0}
+  .trow{display:grid; grid-template-columns:90px 1fr; gap:16px; padding:14px 0; border-bottom:1px solid var(--line)}
+  .trow:last-child{border-bottom:none}
+  .trow .period{font-size:13px; color:var(--muted); padding-top:2px; white-space:nowrap}
+  .trow h4{font-family:Newsreader,serif; font-weight:500; font-size:17px; margin:0 0 3px; color:var(--ink)}
+  .trow p{margin:0; font-size:14px; color:var(--muted); line-height:1.5}
+
+  .badge{
+    display:inline-block; font-size:11px; font-weight:500; letter-spacing:.04em;
+    padding:2px 7px; border-radius:99px; border:1px solid var(--line);
+    color:var(--muted); margin-left:8px; vertical-align:middle; position:relative; top:-1px;
+  }
+
   footer{padding:48px 0 96px; border-top:1px solid var(--line); color:var(--muted); font-size:15.5px}
   footer a{text-decoration:none; color:var(--muted)}
   footer a:hover{text-decoration:underline}
   .dot{margin:0 10px; color:var(--line)}
+
+  @media(max-width:560px){
+    header{padding:64px 0 32px} h1{font-size:36px} .lede{font-size:18px; max-width:none}
+    .grid{grid-template-columns:1fr}
+    .trow{grid-template-columns:70px 1fr; gap:10px}
+    .item .tag{display:none}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <header>
-    <p class="eyebrow">Jonathan Staude</p>
-    <h1>I build AI agents and the infrastructure they run on.</h1>
-    <p class="lede">Founder of <a class="a" href="https://11data.ai">11data</a>. I work on the
-    layer that makes agents reliable in production — memory, tooling, and a documentation-first
-    way of building.</p>
-    <p class="tagline">Concepts were always the easy part. Building them wasn't — so I built the infrastructure to close that gap.</p>
+    <p class="eyebrow">Jonathan Staude · 11data</p>
+    <h1>Enterprise architect turned AI engineer.</h1>
+    <p class="lede">Fifteen years building complex systems — from Solvency II architectures at
+    European insurers to AI agent infrastructure. Founder of
+    <a class="a" href="https://11data.ai">11data</a>.</p>
   </header>
 
   <section>
@@ -90,32 +108,36 @@
       <a class="card" href="https://longmem.dev">
         <img src="assets/longmem.png" alt="LongMem">
         <div class="card-body">
-          <h3>LongMem <span class="badge">Public Beta</span></h3>
-          <p>Give your agents perfect recall. Store, recall, and search long-term memories over a single API. Hybrid vector + keyword search, multi-tenant, MCP-native.</p>
+          <p class="card-meta">2024 · Public Beta</p>
+          <h3>LongMem</h3>
+          <p>Long-term memory for AI agents — store, recall, and search over a single API. Hybrid vector + keyword, multi-tenant, MCP-native.</p>
         </div>
       </a>
 
       <a class="card" href="#">
         <img src="assets/rememberos.png" alt="RememberOS">
         <div class="card-body">
+          <p class="card-meta">2025 · European &amp; sovereign</p>
           <h3>RememberOS</h3>
-          <p>Organizational memory OS. Your organization remembers everything — sovereign, European, self-hostable. Humans decide what matters, agents remember it.</p>
+          <p>Organizational memory OS. Humans decide what matters, agents remember it. Self-hostable, EU-hosted, bring your own model.</p>
         </div>
       </a>
 
       <a class="card" href="https://cc.11data.ai">
-        <img src="assets/check-and-care.png" alt="Check & Care">
+        <img src="assets/check-and-care.png" alt="Check &amp; Care">
         <div class="card-body">
+          <p class="card-meta">2022 · Rhenus Fluid Management</p>
           <h3>Check &amp; Care</h3>
-          <p>Precision maintenance platform for Rhenus Fluid Management. TRGS 611 compliance, KSS management, and consumption analytics — all in one platform.</p>
+          <p>Precision maintenance platform — TRGS 611 compliance, KSS management, and consumption analytics for industrial manufacturing.</p>
         </div>
       </a>
 
       <a class="card" href="#">
         <img src="assets/transcriptdrop.png" alt="TranscriptDrop">
         <div class="card-body">
+          <p class="card-meta">2024 · No app required</p>
           <h3>TranscriptDrop</h3>
-          <p>Audio to inbox. Upload a voice memo — transcript + AI summary delivered to your email. Files auto-delete after 60 minutes. No app, no login, no storage.</p>
+          <p>Audio to inbox. Upload a voice memo — transcript + AI summary delivered to email. Files auto-delete at 60 minutes.</p>
         </div>
       </a>
 
@@ -123,35 +145,120 @@
   </section>
 
   <section>
-    <h2>Platform &amp; methodology</h2>
-    <div class="work">
+    <h2>Open Source &amp; Methodology</h2>
+    <div class="items">
+
+      <a class="item" href="https://github.com/11data/longmem-sdk">
+        <div class="item-head">
+          <h3>longmem-sdk</h3>
+          <span class="year">2024</span>
+          <span class="tag">GitHub →</span>
+        </div>
+        <p>Official LongMem SDKs for Python, TypeScript, LangChain, and Vercel AI. Data connectors and developer docs.</p>
+      </a>
+
+      <a class="item" href="https://github.com/jonameron/longmem-oss">
+        <div class="item-head">
+          <h3>longmem-oss</h3>
+          <span class="year">2024</span>
+          <span class="tag">GitHub →</span>
+        </div>
+        <p>Self-hosting tools for LongMem. Run the full memory backend on your own infrastructure.</p>
+      </a>
+
       <a class="item" href="https://github.com/11data/mira">
-        <span class="tag">GitHub →</span>
-        <h3>Mira</h3>
-        <p>Voice-first agent platform. Mobile PWA and Telegram in one shared session, with a
-        natural-conversation voice pipeline, modular agent routing, and LongMem-backed memory.
-        Self-building: a harness loop drives the agent autonomously.</p>
+        <div class="item-head">
+          <h3>Mira</h3>
+          <span class="year">2025</span>
+          <span class="tag">GitHub →</span>
+        </div>
+        <p>Voice-first agent platform. Mobile PWA and Telegram in one shared session, with a Pipecat voice pipeline, modular agent routing, and LongMem-backed memory. Self-building via a harness loop.</p>
       </a>
+
       <a class="item" href="https://github.com/jonameron/docs-driven-agents">
-        <span class="tag">GitHub →</span>
-        <h3>docs-driven-agents</h3>
-        <p>Documentation as the primary source of truth; reusable procedures as skills; a
-        self-build loop that turns a coding agent into an autonomous developer. Less vibe-coding,
-        more engineering.</p>
+        <div class="item-head">
+          <h3>docs-driven-agents</h3>
+          <span class="year">2024</span>
+          <span class="tag">GitHub →</span>
+        </div>
+        <p>The documentation-first methodology for building with coding agents: docs as source of truth, procedures as skills, wired into a self-build loop that compounds over time.</p>
       </a>
+
+      <a class="item" href="https://github.com/jonameron/11data_agent_research">
+        <div class="item-head">
+          <h3>11data Agent Research</h3>
+          <span class="year">2024</span>
+          <span class="tag">GitHub →</span>
+        </div>
+        <p>Student internship project: three ways to build an AI social-media agent — full-code, low-code, and no-code. Everything in the open.</p>
+      </a>
+
     </div>
   </section>
 
   <section>
-    <h2>Background</h2>
-    <p>I've been building community-driven, decentralized systems since before it was a
-    category. In 2018 I led <a href="https://github.com/jonameron/MK-Protection">protchain</a>,
-    a decentralized cellphone-insurance concept presented at D1Conf in Prague.</p>
-    <p>The throughline hasn't changed: take a process everyone assumes needs a central
-    operator, and work out how to make it reliable without one — whether that's risk in an
-    insurance pool or memory across a fleet of agents.</p>
-    <p>I also bring on student interns and put their work out in the open —
-    <a href="https://github.com/jonameron/11data_agent_research">11data_agent_research</a>.</p>
+    <h2>Consulting &amp; Architecture (2011–2020)</h2>
+    <p>Before founding 11data, I spent a decade as a functional consultant and solution
+    architect in financial services — primarily insurance and banking. I led architecture
+    programs at large European and Asian institutions, working across regulatory reporting,
+    actuarial modeling, and enterprise data.</p>
+    <div class="timeline">
+      <div class="trow">
+        <span class="period">2017–2019</span>
+        <div>
+          <h4>Lead Architect — IFRS 17 <span class="badge">16 months</span></h4>
+          <p>Group-level solution architecture for a major German insurance group's IFRS 17
+          programme. Executive stakeholder management; SAS infrastructure for risk management.</p>
+        </div>
+      </div>
+      <div class="trow">
+        <span class="period">2015–2016</span>
+        <div>
+          <h4>Solution &amp; Data Architect — Finance &amp; Risk</h4>
+          <p>Finance &amp; Risk architecture for a Taiwanese life insurer. Steered implementation of
+          ALM, Solvency II, and RaRoC use cases on SAP HANA / SAP FS-PER / SAP BW.</p>
+        </div>
+      </div>
+      <div class="trow">
+        <span class="period">2012–2014</span>
+        <div>
+          <h4>Functional Consultant — Solvency II <span class="badge">2.5 years</span></h4>
+          <p>Internal model certification PMO support and Pillar III reporting design for a
+          major French insurance group. Prophet actuarial modeling and SAP FI accounting support.</p>
+        </div>
+      </div>
+      <div class="trow">
+        <span class="period">2014–2017</span>
+        <div>
+          <h4>Enterprise Architect — Data &amp; MDM</h4>
+          <p>Data Management Framework, MDM software selection (Informatica, IBM DataStage),
+          and predictive claims modeling at several German insurance groups.</p>
+        </div>
+      </div>
+      <div class="trow">
+        <span class="period">2011</span>
+        <div>
+          <h4>Functional Consultant — IFRS 4 Phase II</h4>
+          <p>Pre-study for non-life insurance processes and IT landscape assessment (ADONIS)
+          at a major German insurance group.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Early &amp; Research Projects</h2>
+    <div class="items">
+      <a class="item" href="https://github.com/jonameron/MK-Protection">
+        <div class="item-head">
+          <h3>protchain</h3>
+          <span class="year">2018</span>
+          <span class="tag">GitHub →</span>
+        </div>
+        <p>Decentralized cellphone insurance on Ethereum — community-driven, no central operator.
+        Presented at D1Conf in Prague.</p>
+      </a>
+    </div>
   </section>
 
   <footer>
